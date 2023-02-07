@@ -5,17 +5,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="main.js" defer></script>
+  <link rel="stylesheet" href="main.css">
   <title>MyTunes</title>
 </head>
 
 <body>
   <form action="/" id="search-form">
-
+    <audio id="audio" autoplay controls src=>
+    </audio>
     <div>
-      <label for="search-text">Search</label>
-      <input type="text" name="search-text" id="search-text" placeholder="enter the term to search" required />
+      <label for="search-text"></label>
+      <input type="text" name="search-text" id="search-text" placeholder="Artist/ Song" required />
     </div>
-    <button type="submit">Search</button>
+    <div>
+      <button id="button" type="submit">Find</button>
+    </div>
 
   </form>
   <h2>BEHOLD</h2>

@@ -1,0 +1,16 @@
+body {
+    background-color: #B5E2FA;
+}
+
+h2,
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#artContainer {
+    background-color: #F9F7F3;
+    margin: auto;
+
+}
