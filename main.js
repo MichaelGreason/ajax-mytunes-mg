@@ -43,12 +43,32 @@ function search(searchTerm) {
 
 function buildResultsHtml(resultsArray) {
     for (let result of resultsArray) {
-        let artistDiv = document.createElement("div");
-        let titleEl = document.createElement('h2');
-        titleEl.innerText = result.artistName;
-        artistDiv.appendChild(titleEl);
-        container.appendChild(artistDiv);
 
+        // overall grouping
+        let overallDiv = document.createElement("div");
+        container.appendChild(overallDiv);
+
+        // album artwork from the API
+        let albumArtEl = document.createElement("img");
+        albumArtEl.classList.add("albumArt");
+        albumArtEl.src = `${result.artworkUrl100}`;
+        overallDiv.appendChild(albumArtEl);
+
+        // song title from the API
+        let songNameEl = document.createElement('p');
+        let songNameGroup = document.createElement("div");
+        songNameGroup.classList.add("songNameGroup");
+        songNameEl.innerText = `Song Title: ${result.trackName}`;
+        songNameGroup.appendChild(songNameEl);
+        overallDiv.appendChild(songNameGroup);
+
+        // artist name from the API
+        let artistEl = document.createElement('p');
+        let artistGroup = document.createElement('div');
+        artistGroup.classList.add("artistGroup");
+        artistEl.innerText = `Artist Name: ${result.artistName}`;
+        artistGroup.appendChild(artistEl);
+        overallDiv.appendChild(artistGroup);
     }
 
 
