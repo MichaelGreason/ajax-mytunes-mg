@@ -41,6 +41,10 @@ function search(searchTerm) {
             // when you have data from the above promise, console log it
             console.log("second .then executed")
             console.log('Here is what we got back from the API', data.results);
+            // how to clear results out of the div...
+            while (container.firstChild) {
+                container.removeChild(container.firstChild);
+            }
             buildResultsHtml(data.results);
         });
 }
@@ -50,6 +54,7 @@ function buildResultsHtml(resultsArray) {
 
         // overall grouping
         let overallDiv = document.createElement("div");
+        overallDiv.classList.add("overallDiv");
         container.appendChild(overallDiv);
 
         // album artwork from the API
@@ -74,7 +79,7 @@ function buildResultsHtml(resultsArray) {
         artistGroup.appendChild(artistEl);
         overallDiv.appendChild(artistGroup);
 
-
+        // making the player funcional by clicking the album art
         albumArtEl.addEventListener('click', function (event) {
             let playSrc = `${result.previewUrl}`;
             console.log(playSrc);

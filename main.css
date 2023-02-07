@@ -10,7 +10,18 @@ form {
 }
 
 #artContainer {
+    width: 100vw;
     background-color: #F9F7F3;
-    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
 
+.overallDiv {
+    border: 2px solid #F7A072;
+    background-color: #EDDEA4;
+    width: 20vw;
+    height: 200px;
+    padding: 5px;
+    margin: 5px;
 }
