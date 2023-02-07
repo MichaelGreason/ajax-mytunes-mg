@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="main.js" defer></script>
-  <title>Music Search</title>
+  <title>MyTunes</title>
 </head>
+
 <body>
+  <form action="/" id="search-form">
+    <div>
+      <label for="search-text">Artist</label>
+      <input type="text" name="search-text" id="search-text" placeholder="enter the term to search" required />
+    </div>
+    <button type="submit">Search</button>
+
+  </form>
+  <h3>Here are the results of your search</h3>
+  <div id="artContainer"></div>
 </body>
+
 </html>
