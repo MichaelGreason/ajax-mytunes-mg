@@ -1,5 +1,8 @@
 body {
-    background-color: #B5E2FA;
+    /* background-color: #B5E2FA; */
+    background-image: linear-gradient(to right, #0FA3B1, #F9F7F3, #F7A072);
+    width: 100vw;
+    font-family: "Rooney", "Futura";
 }
 
 h2,
@@ -11,6 +14,7 @@ form {
 
 #artContainer {
     width: 100vw;
+    border: 10px solid #B5E2FA;
     background-color: #F9F7F3;
     display: flex;
     flex-wrap: wrap;
@@ -19,9 +23,59 @@ form {
 
 .overallDiv {
     border: 2px solid #F7A072;
-    background-color: #EDDEA4;
+    background-color: #B5E2FA;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     width: 20vw;
-    height: 200px;
+    height: 250px;
     padding: 5px;
     margin: 5px;
+}
+
+#audio {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 10px solid #B5E2FA;
+    border: 2px inset black;
+    background-image: linear-gradient(to right, #0FA3B1, #F9F7F3, #F7A072);
+
+
+
+}
+
+.searchbar {
+    border-top: 10px solid #B5E2FA;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50px;
+    width: 100vw;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#search-text {
+    background-color: #B5E2FA;
+    font-family: "Rooney", "Futura";
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 300px;
+}
+
+#button {
+    background-color: #F9F7F3;
+    border: 4px ridge #f9d99a;
+    font-family: "Rooney", "Futura";
+    width: 100px;
+}
+
+
+.albumArt:hover {
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(207, 204, 41, 0.9);
 }
