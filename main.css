@@ -20,6 +20,7 @@ form {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+
 }
 
 .overallDiv {
@@ -35,7 +36,22 @@ form {
     padding: 5px;
     margin: 5px;
     overflow: hidden;
+    animation-duration: 2s;
+    animation-name: slidein;
 }
+
+@keyframes slidein {
+    from {
+        margin-top: 50%;
+        width: 20%;
+    }
+
+    to {
+        margin-top: 0%;
+        width: 20%;
+    }
+}
+
 
 #audio {
     padding-top: 10px;
@@ -43,9 +59,9 @@ form {
     border-top: 10px solid #B5E2FA;
     border: 2px inset black;
     background-image: linear-gradient(to right, #0FA3B1, #F9F7F3, #F7A072);
-
-
-
+    border-radius: 45%;
+    box-shadow: 0 2px 20px black;
+    width: 50%;
 }
 
 .searchbar {
@@ -59,6 +75,12 @@ form {
     padding-top: 20px;
     padding-bottom: 20px;
 }
+
+#search-text:focus-within {
+    box-shadow: 10px 10px 30px black;
+    transition: 1000ms cubic-bezier(0.075, 0.82, 0.165, 1)
+}
+
 
 #search-text {
     background-color: #B5E2FA;
@@ -75,17 +97,20 @@ form {
     border: 4px ridge #f9d99a;
     font-family: "Rooney", "Futura";
     width: 100px;
+    box-shadow: 0 2px 20px black;
 }
 
 
 .albumArt:hover {
-    cursor: pointer;
     box-shadow: 0 5px 15px rgba(207, 204, 41, 0.9);
 }
 
 .overallDiv:hover {
     box-shadow: 0 20px 20px rgba(247, 160, 114, 0.9);
+    transition: 1000ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    cursor: pointer;
 }
+
 
 /* .songNameGroup,
 .artistGroup {} */

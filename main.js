@@ -7,6 +7,9 @@ const container = document.querySelector('#artContainer');
 
 const player = document.querySelector("#audio");
 
+const body = document.querySelector('#body')
+
+
 
 
 form.addEventListener('submit', function (event) {
@@ -49,6 +52,12 @@ function search(searchTerm) {
         });
 }
 
+// let behold = document.createElement('h2');
+// behold.classList.add('behold')
+// behold.innerText = 'BEHOLD';
+// body.appendChild(behold);
+
+
 function buildResultsHtml(resultsArray) {
     for (let result of resultsArray) {
 
@@ -80,7 +89,7 @@ function buildResultsHtml(resultsArray) {
         overallDiv.appendChild(artistGroup);
 
         // making the player funcional by clicking the album art
-        albumArtEl.addEventListener('click', function (event) {
+        overallDiv.addEventListener('click', function (event) {
             let playSrc = `${result.previewUrl}`;
             console.log(playSrc);
             player.src = playSrc;
